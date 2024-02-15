@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title> Our Services</title>
+{% endblock title %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/aptitude.css' %}">
+<link rel="stylesheet" href="{% static 'css/aptitude1.css' %}">
+
+{% endblock css %}
+
+
+{% block body %}
+<br><br>
+<div class="buttons">
+    <!-- HTML !-->
+    <button class="button-71" onclick= "location.href='{% url 'aptitude1' %}'"role="button">Science</button>
+    <button class="button-71" onclick= "location.href='{% url 'aptitude2' %}'" role="button">Commerce</button>
+   <button class="button-71" onclick= "location.href='{% url 'aptitude3' %}'"role="button">Arts</button>
+
+</div>
+<div class="apti">
+
+    <div class="container">
+        <h2>Aptitude Test</h2>
+
+        <form method="post">
+            {% csrf_token %}
+            <fieldset>
+                <legend>Question : What does GDP stand for?</legend>
+                <label>
+                    <input type="radio" name="question_1" value="option_1"> Gross Domestic Product
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_2"> General Development Process
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_3"> Global Demand Projection
+                </label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Question :Which accounting principle focuses on recording revenues and expenses when they are earned or incurred, not when the cash is received or paid?</legend>
+                <label>
+                    <input type="radio" name="question_2" value="option_1"> Matching Principle
+                </label><br>
+                <label>
+                    <input type="radio" name="question_2" value="option_2">Revenue Recognition Principle
+                </label><br>
+                <label>
+                    <input type="radio" name="question_2" value="option_3">  Cost Principle
+                </label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question : What is the capital of France?</legend>
+                <label>
+                    <input type="radio" name="question_1" value="option_1"> Paris
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_2"> Berlin
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_3"> Madrid
+                </label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question : In marketing, the 4Ps stand for Product, Price, Place, and:</legend>
+                <label>
+                    <input type="radio" name="question_1" value="option_1"> Promotion
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_2"> Profit
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_3"> Production
+                </label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question : What is the primary function of the Securities and Exchange Board of India (SEBI)?</legend>
+                <label>
+                    <input type="radio" name="question_1" value="option_1">  Environmental Regulation
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_2"> Capital Market Regulation
+
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_3"> Labor Market Supervision
+                </label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question : What is the capital of France?</legend>
+                <label>
+                    <input type="radio" name="question_1" value="option_1"> Paris
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_2"> Berlin
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_3"> Madrid
+                </label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question : Which economic system is characterized by private ownership and market-driven decision-making?</legend>
+                <label>
+                    <input type="radio" name="question_1" value="option_1"> Capitalism
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_2"> Socialism
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_3"> Communism
+                </label><br>
+            </fieldset>
+            
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="bottom-button">
+
+        <button class="button-71" onclick= "location.href='{% url 'aptitude3' %}'" role="button">Next Section >></button>
+    </div>
+</div>
+
+{% endblock body %}

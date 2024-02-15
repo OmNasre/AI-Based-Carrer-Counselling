@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title> Aptitude1</title>
+{% endblock title %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/aptitude.css' %}">
+<link rel="stylesheet" href="{% static 'css/aptitude1.css' %}">
+
+{% endblock css %}
+
+
+
+{% block body %}
+
+<div class="buttons">
+    <!-- HTML !-->
+   <button class="button-71" onclick= "location.href='{% url 'aptitude1' %}'"role="button">Science</button>
+     <button class="button-71" onclick= "location.href='{% url 'aptitude2' %}'" role="button">Commerce</button>
+    <button class="button-71" onclick= "location.href='{% url 'aptitude3' %}'"role="button">Arts</button>
+
+</div>
+<div class="apti">
+
+    <div class="container">
+        <h2>Aptitude Test</h2>
+
+        <form method="post">
+            {% csrf_token %}
+           
+            <fieldset>
+                <legend>Question : What type of waves are sound waves?</legend>
+                <label>
+                    <input type="radio" name="question_1" value="option_1"> Transverse waves
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_2"> Longitudinal waves 
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_3"> Electromagnetic waves
+                </label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question : What is the role of DNA in cells?</legend>
+                <label>
+                    <input type="radio" name="question_1" value="option_1"> Energy production
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_2"> Storage of genetic information 
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_3">  Cell structure
+                </label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question : Which gas is most abundant in the Earth's atmosphere?
+                </legend>
+                <label>
+                    <input type="radio" name="question_1" value="option_1"> Oxygen
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_2"> Nitrogen
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_3"> Carbon dioxide
+                </label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question :According to Newton's second law, what is the relationship between force, mass, and acceleration?</legend>
+                <label>
+                    <input type="radio" name="question_1" value="option_1"> Force = Mass × Acceleration 
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_2"> Force = Mass / Acceleration
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_3">  Force = Acceleration / Mass
+                </label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question : What is the function of the mitochondria in a cell?</legend>
+                <label>
+                    <input type="radio" name="question_1" value="option_1"> Storage of genetic information
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_2"> Energy production
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_3"> Protein synthesis
+                </label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question : What is the SI unit of electric current?</legend>
+                <label>
+                    <input type="radio" name="question_1" value="option_1"> Watts
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_2"> Volts
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_3"> Amperes
+                </label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question : Which element is the primary component of organic compounds?</legend>
+                <label>
+                    <input type="radio" name="question_1" value="option_1"> Hydrogen
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_2"> Carbon
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_3"> Oxygen
+                </label><br>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="bottom-button">
+
+        <button class="button-71" onclick= "location.href='{% url 'aptitude2' %}'" role="button">Next Section >></button>
+    </div>
+</div>
+{% endblock body %}
+    
+    

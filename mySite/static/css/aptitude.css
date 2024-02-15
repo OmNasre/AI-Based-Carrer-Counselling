@@ -1,0 +1,52 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.apti .container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.apti h2 {
+    color: #333;
+}
+
+.apti form {
+    margin-top: 20px;
+}
+
+.apti fieldset {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.apti label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.apti input[type="radio"] {
+    margin-right: 5px;
+}
+
+.apti button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.apti button:hover {
+    background-color: #2980b9;
+}

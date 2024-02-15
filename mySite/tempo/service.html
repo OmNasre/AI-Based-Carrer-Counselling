@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title> Our Services</title>
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/service.css' %}">
+
+{% endblock css %}
+
+
+{% block body %}
+<!-- <h1>Services</h1> -->
+<br><br>
+<header>
+    <h1>Educational Support Services</h1>
+    <p>Providing educational loans for underprivileged students and information on nearby colleges.</p>
+</header>
+<section class="loan-section">
+    <h2 style="font-weight: bolder;">Educational Loans</h2>
+    <p style="font-size: 20px;"> we are committed to breaking down barriers to education and fostering empowerment for
+        all. Recognizing the financial challenges faced by underprivileged students, we extend a helping hand through
+        our Education Loan Service. Tailored to support the dreams of bright minds with limited resources, our
+        low-interest educational loans pave the way for individuals to pursue higher education without the burden of
+        immediate financial strain. By providing accessible financial assistance, we strive to ensure that no aspiring
+        student is left behind, fostering a future where education is a beacon of hope and opportunity..</p>
+    <button>Apply Now</button>
+    <h2 style="font-weight: bolder; padding-top:30px">Scholerships</h2>
+    <p style="font-size: 20px;"> we are committed to breaking down barriers to education and fostering empowerment for
+        all. Recognizing the financial challenges faced by underprivileged students, we extend a helping hand through
+        our Education Loan Service. Tailored to support the dreams of bright minds with limited resources, our
+        low-interest educational loans pave the way for individuals to pursue higher education without the burden of
+        immediate financial strain. By providing accessible financial assistance, we strive to ensure that no aspiring
+        student is left behind, fostering a future where education is a beacon of hope and opportunity..</p>
+    </p>
+    <button>Apply Now</button>
+</section>
+<section style="padding-top: 200px;" class="career-path">
+    <div class="step">
+        <h2>Step 1: Self-Discovery</h2>
+        <p>Reflect on your strengths, interests, and values to identify potential career paths.</p>
+    </div>
+    <div class="step">
+        <h2>Step 2: Skill Development</h2>
+        <p>Acquire the necessary skills through education, training, and hands-on experience.</p>
+    </div>
+    <div class="step">
+        <h2>Step 3: Explore Options</h2>
+        <p>Research different career options and industries to align with your goals and preferences.</p>
+    </div>
+   
+</section>
+{% endblock body %}

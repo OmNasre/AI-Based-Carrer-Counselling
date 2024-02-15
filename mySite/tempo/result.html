@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title> Result</title>
+{% endblock title %}
+
+
+{% block style %}
+  <style>
+    .result-container{
+      width: 60%;
+      margin: auto;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      border: 1px solid gray;
+      border-radius: 30px;
+      text-align: center;
+      padding-block: 100px;
+    }
+  </style>
+  
+{% endblock style %}
+  
+
+
+{% block body %}
+
+<div class="result-container">
+  <h2>Test Result</h2>
+  <p>Your aptitude test results suggest a strong interest in:</p>
+  <p class="interest">Science And Technolgy</p>
+  <!-- Replace "Technology and Innovation" with the actual interest determined by the test -->
+
+  <!-- Additional information or recommendations can be added here -->
+  <p>Explore related fields and opportunities to nurture your passion!</p>
+</div>
+{% endblock body %}

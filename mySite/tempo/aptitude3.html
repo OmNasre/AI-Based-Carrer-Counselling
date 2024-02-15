@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title> Our Services</title>
+{% endblock title %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/aptitude.css' %}">
+<link rel="stylesheet" href="{% static 'css/aptitude1.css' %}">
+
+{% endblock css %}
+
+
+{% block body %}
+<br><br>
+<div class="buttons">
+    <!-- HTML !-->
+    <button class="button-71" onclick= "location.href='{% url 'aptitude1' %}'"role="button">Science</button>
+    <button class="button-71" onclick= "location.href='{% url 'aptitude2' %}'" role="button">Commerce</button>
+   <button class="button-71" onclick= "location.href='{% url 'aptitude3' %}'" role="button">Arts</button>
+
+</div>
+<div class="apti">
+
+    <div class="container">
+        <h2>Aptitude Test</h2>
+        <form method="post">
+            {% csrf_token %}
+            <fieldset>
+                <legend>Question: Who is often referred to as the "Father of Indian Modern Art"?</legend>
+                <label>
+                    <input type="radio" name="question_1" value="option_1"> Rabindranath Tagore
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_2"> M.F. Husain
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_3"> Raja Ravi Varma
+                </label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Question: The dance form Kathakali is traditional to which Indian state?</legend>
+                <label>
+                    <input type="radio" name="question_2" value="option_1"> Kerala
+                </label><br>
+                <label>
+                    <input type="radio" name="question_2" value="option_2"> Odisha
+                </label><br>
+                <label>
+                    <input type="radio" name="question_2" value="option_3"> West Bengal
+
+                </label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question: In Indian classical music, which instrument is known as the "Queen of Instruments"?</legend>
+                <label>
+                    <input type="radio" name="question_1" value="option_1"> Sitar
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_2"> Flute
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_3"> Veena
+                </label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question: The Ajanta and Ellora Caves, known for their ancient rock-cut sculptures, are located in which state of India?</legend>
+                <label>
+                    <input type="radio" name="question_1" value="option_1"> Madhya Pradesh
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_2"> Maharashtra
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_3"> Rajasthan
+                </label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Who wrote the famous Sanskrit play "Shakuntala"?</legend>
+                <label>
+                    <input type="radio" name="question_1" value="option_1"> Kalidasa
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_2"> Tulsidas
+                </label><br>
+                <label>
+                    <input type="radio" name="question_1" value="option_3"> Bhasa
+                </label><br>
+            </fieldset>
+           
+
+    <a href="{% url 'result' %}"><button type="submit" onclick="location.href='{% url 'result' %}'" role="button">Result</button></a>
+    <!-- <button type="submit" onclick= "location.href='{% url 'result' %}'" role="button">Submit</button> -->
+        </form>
+    </div>
+</div>
+
+{% endblock body %}

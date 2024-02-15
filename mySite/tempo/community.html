@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title> Community</title>
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/community.css' %}">
+<link rel="stylesheet" href="{% static 'css/community1.css' %}">
+
+
+{% endblock css %}
+
+{% block style %}
+<style>
+    * {
+        font-family: poppins;
+    }
+
+    .news .row {
+        padding-block: 30px;
+        display: flex;
+        width: 75vw;
+        margin: auto;
+        justify-content: space-between;
+    }
+
+    .news h3 {
+        width: 100%;
+        text-align: center;
+        padding-block: 40px;
+        font-size: 50px;
+        color: rgb(18, 7, 224)
+    }
+
+    .news .box {
+        width: 29%;
+        height: 380px;
+        background: #e1dfdf;
+        border-radius: 15px;
+        padding: 20px;
+        border: 1px solid black;
+    }
+
+    .box h5 {
+        font-size: 17px;
+        font-weight: bolder;
+    }
+
+    .box p {
+        font-size: 15px;
+    }
+
+    .blogs {
+        background: #1f68e6;
+        color: white;
+        width: 100%;
+        height: 110px;
+        padding-block: 20px;
+        text-align: center;
+        font-weight: bolder;
+    }
+    .blogs-box{
+        margin-top: 29px;
+        margin-bottom: 30px;
+    }
+
+    .blogs-box .row {
+        width: 85%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .blogs-box .box {
+        width: 29%;
+        height: 380px;
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        border: 1px solid rgb(146, 145, 145);
+
+    }
+    .blogs-box .box:hover{
+        transform: scale3d(1.016, 1.006, 1);
+        transition-duration: .4s;
+        cursor: pointer;
+    }
+</style>
+
+
+{% endblock style %}
+{% block body %}
+<div class="news">
+    <h3>Latest News</h3>
+    <div class="row">
+        <div class="box">
+            <h5> Students From India achive top results in Outstanding Cambridge Learner Awards </h5>
+            <hr>
+            <p>Academic stage, securing top honors in the Outstanding Cambridge Learner Awards. Their exceptional
+                performance across various subjects showcases the unwavering dedication and brilliance of the young
+                minds in India.</p>
+
+            <button type="button" class="btn btn-secondary">Read More</button>
+        </div>
+        <div class="box">
+            <h5>IIT Madras' second offshore campus likely to come up in Sri Lanka
+            </h5>
+            <hr>
+            <p>"A high-level delegation had recently visited the Chennai campus to discuss the future roadmap. The talks
+                are on and the campus is likely to come up in Kandy," a source said..</p>
+            <button type="button" class="btn btn-secondary">Read More</button>
+
+
+        </div>
+        <div class="box">
+            <h5> Kota registers yet another suspected suicide case after JEE aspirant allegedly hangs self, third case
+                since January </h5>
+            <hr>
+            <p>The deceased hailed from Chhattisgarh and was a student of Class 12. He had appeared in the JEE-Main 2024
+                exams. His result is yet to be ascertained..</p>
+            <button type="button" class="btn btn-secondary">Read More</button>
+
+
+        </div>
+    </div>
+</div>
+<div class="blogs">
+    <h2>Blogs !!!!</h2>
+    <h4>By Some Of our Specialist</h4>
+</div>
+<!-- <br><br> -->
+<div class="blogs-box">
+    <div class="row">
+        <div class="box">
+            <h5> "Unlocking the Power of Imagination in Education"</h5>
+            <hr>
+            <p>Embark on a journey of educational innovation with our latest blog, where our imaginary educational
+                specialists explore the transformative role of imagination in learning. Discover how imaginative
+                teaching methods can foster creativity, critical thinking, and a lifelong love for learning. Let's
+                reimagine education together!</p>
+
+        </div>
+        <div class="box">
+            <h5>"Imaginary Learning Environments: Beyond the Classroom Walls"
+
+            </h5>
+            <hr>
+            <p>Step into a world where education knows no bounds! Join our educational specialists as they delve into
+                the concept of imaginary learning environments. From virtual classrooms to interactive simulations,
+                explore how these imaginative settings can revolutionize the traditional learning experience, making
+                education more engaging and impactful.</p>
+
+
+        </div>
+        <div class="box">
+            <h5> "The Art of Imaginary Assessments: Beyond Standardized Testing"
+            </h5>
+            <hr>
+            <p>Bid farewell to conventional assessments and embrace a new era of evaluating knowledge. Our educational
+                specialists guide you through the innovative realm of imaginary assessments, where creativity and
+                critical thinking take center stage. Discover how these imaginative evaluations can better reflect
+                students' true understanding and capabilities.</p>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
+{% endblock body %}

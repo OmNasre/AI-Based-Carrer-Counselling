@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    
+    {% block title %}
+        
+    <!-- <title>Responsive Navbar </title> -->
+    {% endblock title %}
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    
+    {% block css %}
+        
+    {% endblock css %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  
+  {% block style %}
+    
+  {% endblock style %}
+    
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">CareerSyncAI</label>
+      <ul>
+        <li><a class="active" href="/" >Home</a></li>
+        <li><a href="/aptitude">Aptitude Test</a></li>
+        <li><a href="/chatbot">AI Chatbot</a></li>
+        <li><a href="/service">service</a></li>
+        <li><a href="/community">Community</a></li>
+      </ul>
+    </nav>
+    <!-- <section></section>/ -->
+    
+    {% block body %}     
+    {% endblock body %}
+
+      <!-- Site footer -->
+      
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        
+    <!-- Site footer -->
+    <footer class="site-footer" style="width: 100vw;">
+      <div class="container"   style="background-color: #26272b;">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Founded on the principles of inclusivity and innovation, [Your Organization Name] strives to bridge gaps in education, offer support to those in need, and foster a community that believes in the transformative power of knowledge. Whether it's through our education loan services, career counseling, or skill development initiatives, we are committed to making a positive impact on the lives of students and professionals alike.</p>
+          </div>
+
+          <!-- <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+              <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+              <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+              <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+              <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+              <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+            </ul>
+          </div> -->
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/sitemap/">Home</a></li>
+              <li><a href="http://scanfcode.com/about/">Aptitude Test</a></li>
+              <li><a href="http://scanfcode.com/contact/">AI Chat bot</a></li>
+              <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Services</a></li>
+              <li><a href="http://scanfcode.com/privacy-policy/">Community</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container" style="background-color: #26272b;">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+         <a href="#">Scanfcode</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+</body>
+</html>
+
+
+
+

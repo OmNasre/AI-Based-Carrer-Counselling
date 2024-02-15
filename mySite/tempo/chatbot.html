@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title> AI- Chatbot</title>
+{% endblock title %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/chatbot.css' %}">
+
+{% endblock css %}
+
+{% block style %}
+
+    <style>
+        .head{
+            height: 220px;
+            text-align: center;
+            background: #516395;
+        }
+        .head h2{
+            text-align: center;
+            color: #d5d3d3;
+
+            font-weight: 800;
+            font-family: poppins;
+        }
+        .head h1{
+            font-weight: bolder;
+            color: aquamarine;
+            text-decoration: underline;
+            
+        }
+        #conversation{
+            background: #d5d3d3;
+        }
+        textarea{
+            border-radius: 6px;
+            padding: 10px;
+            font-size: 30px;
+        }
+        .submit{
+            width: 103px;
+            font-size: 20px;
+        }
+    </style>
+
+{% endblock style %}
+
+
+
+
+{% block body %}
+<br>
+<div class="head">
+
+<p>. </p>
+<h2>Hello I'm <h2> <h1> CarrerSyncAI</h1> <br><h2> How I Can Help You?
+</h2>
+</div>
+<br><br><br>
+
+<div id="conversation">
+    {% for message in conversation %}
+    {% if message.role == 'user' %}
+    <div class="user-messages">
+        <p>You: {{ message.content }}</p>
+    </div>
+    {% elif message.role == 'assistant' %}
+    <div class="chatbot-messages">
+        <p>ChatBot: {{ message.content }}</p>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+<form id="chat-form" method="POST" action="{% url 'chatbot' %}" style="padding-block: 20px;">
+    {% csrf_token %}
+    <div class="container" style="width: 81%;">
+        <textarea rows="3" class="centered-textarea" id="user-input" type="text" name="user_input"
+            placeholder="Your message"></textarea>
+        <input type="submit" value="Send" class="submit">
+    </div>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const chatForm = document.getElementById('chat-form');
+        const userInput = document.getElementById('user-input');
+        const conversation = document.getElementById('conversation');
+
+        // Scroll conversation to the bottom
+        conversation.scrollTop = conversation.scrollHeight;
+
+        // Submit the form when the user presses Enter key
+        userInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                chatForm.submit();
+            }
+        });
+
+        // Focus on the user input field
+        userInput.focus();
+    });
+</script>
+{% endblock body %}

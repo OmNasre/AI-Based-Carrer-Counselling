@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock css %}
+
+{% block title %}
+<title>Home</title>
+
+{% endblock title %}
+
+{% block style %}
+
+  <style>
+    .home4{
+      width: 75%;
+      height: 284px;
+      border-radius: 100px 0px 100px 0px;
+      background-color: #7F27FF;
+      margin: auto;
+      display: flex;
+      justify-content: space-around;
+      color: aliceblue;
+      padding-top: 30px;
+    }
+    .home4-2{
+      width: 595px;
+      height: 400px;
+      font-size: 17px;
+    }
+    .home4 img{
+      width: 300px;
+      border-radius: 50%;
+    }
+    .body{
+      padding-bottom: 50px;
+    }
+  </style>
+  
+{% endblock style %}
+  
+
+
+
+{% block body %}
+<div class="body" style="
+background-color: #516395;
+">
+
+
+
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel"
+    style="width: 90%; margin:auto; margin-bottom :30px;">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="/static/images/1.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="/static/images/2.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/images/3.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <div class="home-help" style="
+  background-color: #516395;
+  ">
+    <div class="help1" ; style="background-image: url('/static/images/bg1.png'); background-size: cover;
+    background-position: center; ">
+    </div>
+    <div class="help2">
+
+      <h2 style=" color:white;
+      background-color: #516395;
+      ">How do we help?</h2>
+      <ul>
+
+        <li style="list-style-type: disc;">
+          <h3 style=" color:white;">Career Path Insights</h3>
+        </li>
+        <li style="list-style-type: disc;">
+          <h3 style=" color:white;">AI-guided Counseling</h3>
+        </li>
+        <li style="list-style-type: disc;">
+          <h3 style=" color:white;">Aptitude-based Interest Discovery </h3>
+        </li>
+        <button type="button" class="btn btn-primary " style="background-color: #137eb6; font-size: 10px padding">Start
+          Aptitude Test Now</button>
+
+
+        <li style="list-style-type: disc;">
+          <h3 style="padding-top:30px;color:white;">Comprehensive Educational Support </h3>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <br><br>
+  <div class="home3" style="
+  background-color: #516395;
+  ">
+    <div class="body">
+      <h3 style="padding-block: 20px; font-size: 42px;">Whtat's Our Aim!!</h3>
+      <p style="font-size: 25px;">Career is a crucial and important part of one’s life. Factors like your interests,
+        abilities, values, personality, background, and circumstances are quite influencing for your career development.
+        Career development is not just deciding on what job you want to get when you graduate. It is a lifelong process
+        meaning that continually have to make career and life decisions. A process that will help you understand
+        yourself and the world of work in order to make career, education, and life decisions is a career counselling.
+        The goal of Career Counseling is to not only help you make the decisions you need to make now, but to give you
+        the thorough knowledge about the skills you need to set a good career.</p>
+    </div>
+  </div>
+  <div class="home4">
+    <div class="home4-1">
+        <img  src="/static/images/emp1.jpg" alt="">
+    </div>
+    <div class="home4-2">
+      <p>AI-based career counseling offers personalized insights, leveraging vast data to analyze individual strengths and preferences. It provides accurate and up-to-date information on emerging industries, aligning career choices with evolving market trends. The efficiency of AI algorithms ensures a comprehensive understanding of diverse career paths, assisting individuals in making informed decisions. By eliminating biases, AI promotes inclusivity and guides users towards fulfilling, well-matched career trajectories. </p>
+      <h5>: ChatGpt</h5>
+    </div>
+  </div>
+</div>
+{% endblock body %}
